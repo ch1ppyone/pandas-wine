@@ -115,137 +115,23 @@
         </div>
         <div class="row">
 
-
+{% for key, value in data.iterrows() %}
           <div class="col-lg-4 mb-5 col-md-6">
             <div class="wine_v_1 text-center pb-4 pt-5">
-            
+            {% if value[5] != null and value[5] != "" %}
             <img src="assets/profitable.png" style="width:10rem;height: 10rem;position:absolute;right: -20px;top: -20px;">
-            
-              <img src="images/belaya_ledi.png" alt="Image" class="img-fluid">
+            {% endif %}
+              <img src="images/{{ value[4] }}" alt="Image" class="img-fluid">
               <div>
                 <h3 class="heading mt-3 mb-3 text-dark"> </h3>
                 <p>
-                  Белая леди<br/>
-                  <span class="price"> 399 р.</span>
+                  {{ value[1] }}<br/>
+                  <span class="price"> {{ value[3] }} р.</span>
                 </p>
               </div>
             </div>
           </div>
-
-          <div class="col-lg-4 mb-5 col-md-6">
-            <div class="wine_v_1 text-center pb-4 pt-5">
-            
-              <img src="images/konyak_klassicheskyi.png" alt="Image" class="img-fluid">
-              <div>
-                <h3 class="heading mt-3 mb-3 text-dark"> </h3>
-                <p>
-                  Коньяк классический<br/>
-                  <span class="price"> 350 р.</span>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mb-5 col-md-6">
-            <div class="wine_v_1 text-center pb-4 pt-5">
-            
-              <img src="images/rkaciteli.png" alt="Image" class="img-fluid">
-              <div>
-                <h3 class="heading mt-3 mb-3 text-dark"> </h3>
-                <p>
-                  Ркацители<br/>
-                  <span class="price"> 499 р.</span>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mb-5 col-md-6">
-            <div class="wine_v_1 text-center pb-4 pt-5">
-            
-              <img src="images/chernyi_lekar.png" alt="Image" class="img-fluid">
-              <div>
-                <h3 class="heading mt-3 mb-3 text-dark"> </h3>
-                <p>
-                  Черный лекарь<br/>
-                  <span class="price"> 399 р.</span>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mb-5 col-md-6">
-            <div class="wine_v_1 text-center pb-4 pt-5">
-            
-              <img src="images/hvanchkara.png" alt="Image" class="img-fluid">
-              <div>
-                <h3 class="heading mt-3 mb-3 text-dark"> </h3>
-                <p>
-                  Хванчкара<br/>
-                  <span class="price"> 550 р.</span>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mb-5 col-md-6">
-            <div class="wine_v_1 text-center pb-4 pt-5">
-            
-              <img src="images/kokur.png" alt="Image" class="img-fluid">
-              <div>
-                <h3 class="heading mt-3 mb-3 text-dark"> </h3>
-                <p>
-                  Кокур<br/>
-                  <span class="price"> 450 р.</span>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mb-5 col-md-6">
-            <div class="wine_v_1 text-center pb-4 pt-5">
-            
-              <img src="images/kindzmarauli.png" alt="Image" class="img-fluid">
-              <div>
-                <h3 class="heading mt-3 mb-3 text-dark"> </h3>
-                <p>
-                  Киндзмараули<br/>
-                  <span class="price"> 550 р.</span>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mb-5 col-md-6">
-            <div class="wine_v_1 text-center pb-4 pt-5">
-            
-            <img src="assets/profitable.png" style="width:10rem;height: 10rem;position:absolute;right: -20px;top: -20px;">
-            
-              <img src="images/chacha.png" alt="Image" class="img-fluid">
-              <div>
-                <h3 class="heading mt-3 mb-3 text-dark"> </h3>
-                <p>
-                  Чача<br/>
-                  <span class="price"> 299 р.</span>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mb-5 col-md-6">
-            <div class="wine_v_1 text-center pb-4 pt-5">
-            
-              <img src="images/konyak_kizilovyi.png" alt="Image" class="img-fluid">
-              <div>
-                <h3 class="heading mt-3 mb-3 text-dark"> </h3>
-                <p>
-                  Коньяк кизиловый<br/>
-                  <span class="price"> 350 р.</span>
-                </p>
-              </div>
-            </div>
-          </div>
-     
+{% endfor %}     
 
         </div>
       </div>
